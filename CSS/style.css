@@ -19,8 +19,30 @@
   background-color: khaki;
 }
 
-.square{
+.square100{
   background-color: blue;
   height: calc(100% / 10);
   width: calc(100% / 10);
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
+.square81{
+  background-color: blue;
+  height: calc(100% / 9);
+  width: calc(100% / 9);
+  border: 2px solid white;
+}
+.square49{
+  background-color: blue;
+  height: calc(100% / 7);
+  width: calc(100% / 7);
+  border: 2px solid white;
+}
+
+.clicked{
+  background-color: seagreen;
+}
+
