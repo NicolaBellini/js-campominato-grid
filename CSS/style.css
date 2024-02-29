@@ -12,6 +12,26 @@ img{
   transition: .3s;
 }
 
+@keyframes muoviSfondo {
+  0% {
+      background-position: 20% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100%{
+    background-position: 20% 50%
+  }
+}
+
+.sfondo-doppio {
+  background: linear-gradient(to bottom right, #150e7d, #2e9aaa); /* definisci il gradiente con i due colori */
+  background-size: 400% 100%; /* dimensione del gradiente, 200% per coprire entrambi i colori */
+  animation: muoviSfondo 10s linear infinite; /* animazione per far muovere il gradiente */
+  height: 100vh; /* altezza dell'elemento */
+  width: 100%; /* larghezza dell'elemento */
+}
+
 
 img:hover{
   animation: alzareEAbbassare 1.2s ease infinite; 
@@ -61,12 +81,15 @@ img:hover{
 .canva{
   width: 1000px;
   height: 1000px;
-  background-color: #98ABEE;
+  background-color: rgba(192, 192, 192, 0.077);
   transition: 1.2s;
+  border-radius: 20px;
+  overflow: hidden;
+  outline: 1px solid white;
 }
 
 .canva:hover{
-  box-shadow: 0 0 100px #f9e8c97b;
+  box-shadow: 0 0 100px #ffffff3f;
 }
 
 
@@ -109,6 +132,6 @@ img:hover{
 }
 
 .clicked{
-  background-color: #F9E8C9;
+  background-color: #ffffff;
 }
 
