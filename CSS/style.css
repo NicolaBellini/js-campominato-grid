@@ -24,6 +24,14 @@ img{
   background-color: rgb(120, 120, 255);
 }
 
+.action-bar > *{
+  margin: 0 20px;
+}
+
+.my-select{
+  width: 30%;
+}
+
 .canva{
   width: 600px;
   /* min-width: 300px; */
