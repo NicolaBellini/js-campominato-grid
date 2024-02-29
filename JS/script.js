@@ -1,16 +1,32 @@
 const canva = document.querySelector(".canva")
 let selectInput = document.querySelector(".my-select").value
+
+const btnStart = document.querySelector(".btn1")
+const btnReset = document.querySelector(".btn2")
 // faccio il reset della mia tela eliminando qualsiasi cosa abbia messo nell html
 // reset();
 
 
 
-// funzione che fa partire tutto
-init()
+
+// Aggiorna il valore di selectInput quando viene selezionata una nuova opzione
+document.querySelector(".my-select").addEventListener("change", function(){
+  selectInput = this.value;
+});
 
 
+// Aggiunge un listener al pulsante btnStart per generare i quadrati
+btnStart.addEventListener("click", function() {
+  reset();
+  getHundredSq();
+});
 
+// Aggiunge un listener al pulsante btnReset per resettare la tela
+btnReset.addEventListener("click", reset);
 
+// Inizializza l'applicazione
+reset();
+getHundredSq();
 
 
 // functions/////
@@ -25,6 +41,8 @@ function getHundredSq(){
 }
 // funzione per generare i quadrati all interno della canva, e al click applica la classe .clicked, in più aggiungendo una costante(squareText) scrivendola nel sq.
 function square100(indice){
+
+
   const sq = document.createElement("div");
   sq.className= setHowManySquare();
 
@@ -58,21 +76,9 @@ function square100(indice){
   return sq
 }
 
- setHowManySquare()
- console.log(setHowManySquare())
-
-// funzione che ritorna la difficoltà scelta dopo il click
-function setdifficulty(){
-  let choice = "";
-
-  if(selectC == "Noob"){
-    return choice = "Noob"
-  }
-
-}
 
 
-// se lka difficoltà è easy metto la classe 100, medium metto 81 quadrati e se è hard 49
+// se lka difficoltà è easy metto la classe 100, medium metto 81 quadrati e se è hard 49, gestendoli con le classi css
 function setHowManySquare(){
   let setteddifficult = "";
 
@@ -88,6 +94,7 @@ function setHowManySquare(){
 
 }
 
+// in base alla difficoltà impostata con la select mette un limite numerico al quale i dovrà essere <=
 function setlimit(){
   let limit = "";
 
@@ -103,47 +110,6 @@ function setlimit(){
 
 }
 
-// console.log(setHowManySquare )
-
-
-
-
-// // funzione per generare 81quadrati
-// function eightyOneSq(){
-//   for(let i = 1; i <= 81; i++){
-//     const square = getSquare81()
-
-//     canva.append(square)
-//   }
-// }
-// // funzione per generare i quadrati all interno della canva
-// function getSquare81(){
-//   const sq = document.createElement("div");
-//   sq.className= "square81";
-//   return sq
-  
-//   console.log(sq)
-// }
-
-
-
-
-// // funzione per generare 49quadrati
-// function fourthyNineSq(){
-//   for(let i = 1; i <= 49; i++){
-//     const square = getSquare49()
-
-//     canva.append(square)
-//   }
-// }
-// // funzione per generare i quadrati all interno della canva
-// function getSquare49(){
-//   const sq = document.createElement("div");
-//   sq.className= "square49";
-//   return sq
-  
-//   console.log(sq)
-// }
 
 
 function init(){
