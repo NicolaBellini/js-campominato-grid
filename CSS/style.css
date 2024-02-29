@@ -5,11 +5,29 @@
 }
 
 img{
-  height: 100%;
-  object-fit: cover;
-  /* questa funzione elimina lo sfondo ad un immagine */
-  mix-blend-mode: multiply; 
+ 
+  width: 100%;
+  width: 200px;
+  object-fit: contain;
+  transition: .3s;
+}
 
+
+img:hover{
+  animation: alzareEAbbassare 1.2s ease infinite; 
+  transition: .5s;
+}
+
+@keyframes alzareEAbbassare {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 
 .main-wrapper{
@@ -21,13 +39,18 @@ img{
 .action-bar{
   color: #F9E8C9;
   border: 1px solid black;
-  width: 100%;
+  width: 90%;
   height: 10%;
+  border-radius: 20px;
   background-color: #1D24CA;
 }
 
 .action-bar > *{
   margin: 0 20px;
+}
+
+.action-bar h1{
+  font-weight: 600;
 }
 
 .my-select{
@@ -36,14 +59,17 @@ img{
 }
 
 .canva{
-  width: 600px;
-  /* min-width: 300px; */
-  height: 600px;
-  /* min-height: 300px; */
-  /* aspect-ratio: 1 / 1; */
-
-  background-color: khaki;
+  width: 1000px;
+  height: 1000px;
+  background-color: #98ABEE;
+  transition: 1.2s;
 }
+
+.canva:hover{
+  box-shadow: 0 0 100px #f9e8c97b;
+}
+
+
 
 .square100{
   background-color: #1D24CA;
