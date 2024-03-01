@@ -9,7 +9,7 @@ const btnReset = document.querySelector(".btn2")
 
 
 
-// Aggiorna il valore di selectInput quando viene selezionata una nuova opzione
+// Aggiorna il valore di selectInput quando viene selezionata una nuova opzione, quando l'utente seleziona un'opzione differente nel menu a discesa, l'evento change verrà attivato. 
 document.querySelector(".my-select").addEventListener("change", function(){
   selectInput = this.value;
 });
@@ -36,7 +36,7 @@ function getHundredSq(){
   for(let i = 1; i <= setlimit(); i++){
     const square = square100(i)
 
-    canva.append(square)
+    canva.append(square);
   }
 }
 // funzione per generare i quadrati all interno della canva, e al click applica la classe .clicked, in più aggiungendo una costante(squareText) scrivendola nel sq.
@@ -99,7 +99,7 @@ function setlimit(){
   let limit = "";
 
   if(selectInput == "Noob"){
-    return limit = 100
+    return limit = 100;
   }else if(selectInput == "Normal"){
     return limit = 81;
   }else if(selectInput == "Master"){

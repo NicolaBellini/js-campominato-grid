@@ -75,12 +75,16 @@ img:hover{
 
 .my-select{
   width: 30%;
-  background-color: gre;
+  background-color: rgb(180, 180, 180);
+}
+
+.my-select:focus{
+  outline: none;
 }
 
 .canva{
-  width: 1000px;
-  height: 1000px;
+  width: 600px;
+  height: 600px;
   background-color: rgba(192, 192, 192, 0.077);
   transition: 1.2s;
   border-radius: 20px;
@@ -121,6 +125,7 @@ img:hover{
   font-size: 1.3rem;
 }
 .square49{
+  border-radius: 6px;
   background-color: #4d4d4d;
   height: calc(100% / 7);
   width: calc(100% / 7);
