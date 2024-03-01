@@ -71,15 +71,17 @@ img:hover{
 
 .action-bar h1{
   font-weight: 600;
+  text-wrap: nowrap;
 }
 
 .my-select{
   width: 30%;
   background-color: rgb(180, 180, 180);
+  outline: none !important;
 }
 
 .my-select:focus{
-  outline: none;
+  outline: grey !important;
 }
 
 .canva{
